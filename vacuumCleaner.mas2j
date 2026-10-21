@@ -14,7 +14,10 @@ MAS vacuumCleaner {
 
     environment: world.VCWorld()
 
-    agents: cleaner1;
+    agents: cleaner4;
+            //cleaner3;
+            //cleaner2;
+            //cleaner1;
 
     aslSourcePath: "src/agt";
 }
