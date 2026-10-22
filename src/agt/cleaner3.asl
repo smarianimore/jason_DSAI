@@ -15,7 +15,7 @@ Actions:
 */
 
 +pos(_) : dirty <- suck; !move.
-+pos(_) : true  <- !move.
++pos(_) : clean  <- !move.
 
 // plans to move
 +!move : pos(1) <- right.
