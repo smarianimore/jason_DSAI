@@ -14,7 +14,7 @@ Actions:
 
 */
 
-+pos(_) : dirty <- suck; !move.
++pos(X) : dirty <- .print("Found dirt at ", X); suck; !move.
 +pos(_) : clean  <- !move.
 
 // plans to move
