@@ -28,7 +28,7 @@ public class VCWorld extends Environment {
 
     private Object modelLock = new Object();
     private final Icon robotIcon = new RoombaIcon();
-    private final Icon dirtIcon = new DirtPileIcon();
+    private final Icon dirtIcon = new DirtIcon();
 
     /** general delegations */
     private HouseGUI gui = new HouseGUI();
@@ -227,7 +227,7 @@ public class VCWorld extends Environment {
         }
     }
 
-    private static class DirtPileIcon implements Icon {
+    private static class DirtIcon implements Icon {
         private static final int SIZE = 88;
 
         @Override
@@ -246,33 +246,28 @@ public class VCWorld extends Environment {
             g.translate(x, y);
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-            g.setColor(new Color(0, 0, 0, 30));
-            g.fill(new Ellipse2D.Double(12, 65, 66, 10));
+            g.setColor(new Color(0, 0, 0, 18));
+            g.fill(new Ellipse2D.Double(19, 65, 50, 6));
 
-            Path2D.Double pile = new Path2D.Double();
-            pile.moveTo(12, 66);
-            pile.curveTo(14, 56, 23, 53, 28, 48);
-            pile.curveTo(31, 38, 39, 34, 44, 40);
-            pile.curveTo(51, 31, 61, 39, 62, 47);
-            pile.curveTo(72, 49, 77, 57, 77, 66);
-            pile.closePath();
-            g.setPaint(new GradientPaint(30, 38, new Color(139, 91, 48),
-                    50, 67, new Color(75, 45, 27)));
-            g.fill(pile);
+            g.setColor(new Color(151, 143, 128));
+            g.fill(new Ellipse2D.Double(20, 50, 15, 10));
+            g.setColor(new Color(184, 171, 148));
+            g.fill(new Ellipse2D.Double(42, 42, 12, 9));
+            g.setColor(new Color(125, 132, 128));
+            g.fill(new Ellipse2D.Double(55, 56, 16, 9));
 
-            g.setColor(new Color(97, 58, 34));
-            g.setStroke(new BasicStroke(2f));
-            g.draw(pile);
+            g.setColor(new Color(211, 199, 176));
+            g.fill(new Ellipse2D.Double(27, 60, 5, 4));
+            g.fill(new Ellipse2D.Double(59, 43, 4, 4));
+            g.fill(new Ellipse2D.Double(39, 54, 3, 3));
+            g.setColor(new Color(111, 115, 108));
+            g.fill(new Ellipse2D.Double(15, 43, 4, 4));
+            g.fill(new Ellipse2D.Double(49, 63, 3, 3));
 
-            g.setColor(new Color(163, 113, 67));
-            g.setStroke(new BasicStroke(2.5f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
-            g.draw(new QuadCurve2D.Double(27, 58, 38, 49, 49, 58));
-            g.draw(new QuadCurve2D.Double(48, 61, 59, 49, 69, 58));
-
-            g.setColor(new Color(61, 39, 27));
-            g.fill(new Ellipse2D.Double(31, 61, 3, 2));
-            g.fill(new Ellipse2D.Double(55, 54, 3, 2));
-            g.fill(new Ellipse2D.Double(42, 45, 3, 2));
+            g.setColor(new Color(121, 116, 103));
+            g.setStroke(new BasicStroke(2f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+            g.draw(new QuadCurve2D.Double(33, 39, 37, 35, 41, 38));
+            g.draw(new QuadCurve2D.Double(67, 51, 71, 48, 74, 50));
             g.dispose();
         }
     }
