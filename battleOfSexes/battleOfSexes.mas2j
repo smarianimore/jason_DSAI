@@ -1,0 +1,13 @@
+/*
+    battleOfSexes: "a better battle of the sexes" (AI3 - Multi-Agent Systems, slide 41)
+*/
+
+MAS battleOfSexes {
+
+    environment: example.Env
+
+    agents: wife;
+            husband;
+
+    aslSourcePath: "src/agt";
+}
